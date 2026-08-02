@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEMEX|Mohamed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;900&family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: #0e0e0e; 
+            color: #ffffff; 
+            font-family: 'Almarai', sans-serif; 
+            overflow-x: hidden; 
+            line-height: 1.5; 
+        }
+        
+        .main-nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 12px 8%; 
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .logo { font-family: 'Cairo', sans-serif; font-weight: 900; font-size: 1.3rem; color: #fff; text-decoration: none; }
+        .logo span { color: #ffa211; }
+        .back-btn { color: #888; text-decoration: none; font-size: 0.8rem; display: flex; align-items: center; gap: 6px; transition: 0.3s; }
+        .back-btn:hover { color: #ffa211; }
+
+        .page-hero {
+            height: 45vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center; background: radial-gradient(circle at center, rgba(255, 162, 17, 0.08) 0%, #0a0a0a 70%);
+            padding-top: 60px;
+        }
+        .page-hero h1 { font-family: 'Cairo'; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; line-height: 1.1; }
+        .outline-text { color: transparent; -webkit-text-stroke: 1px #ffa211; opacity: 0.8; }
+
+        .section-header { text-align: center; margin-bottom: 35px; padding: 0 5%; }
+        .section-header h2 { font-family: 'Cairo'; font-size: 1.8rem; font-weight: 800; margin-bottom: 10px; }
+        .orange-line { width: 40px; height: 3px; background: #ffa211; margin: 0 auto 15px; border-radius: 10px; }
+        .section-header p { color: #777; font-size: 0.9rem; }
+
+        section { padding: 40px 8%; }
+        .cards-container {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; max-width: 1100px; margin: 0 auto;
+        }
+        .service-card {
+            background: linear-gradient(145deg, #161616, #0f0f0f);
+            border-radius: 20px; padding: 18px; border: 1px solid rgba(255,255,255,0.05);
+            display: flex; flex-direction: column; transition: 0.4s; height: 100%;
+        }
+        .service-card:hover { transform: translateY(-8px); border-color: rgba(255, 162, 17, 0.4); }
+
+        .img-placeholder {
+            width: 100%; height: 220px; background-size: cover; background-position: center;
+            border-radius: 15px; margin-bottom: 18px; position: relative;
+        }
+
+        .service-card h3 { font-family: 'Cairo'; font-size: 1rem; margin-bottom: 20px; flex-grow: 1; }
+
+        .card-btn {
+            width: 100%; padding: 12px; background:#ffa211 ;
+            border: 1px solid rgba(255, 255, 255, 0.08); color: #000; text-decoration: none;
+            border-radius: 12px; font-size: 0.85rem; font-weight: 700; text-align: center;
+            transition: 0.4s; display: flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .service-card:hover .card-btn { background: #ffa211; color: #000; }
+
+        .cards-container-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            direction: rtl;
+        }
+
+        .service-card {
+            flex: 0 1 280px;
+            background: linear-gradient(145deg, #161616, #0f0f0f);
+            border-radius: 20px;
+            padding: 18px;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            flex-direction: column;
+            transition: 0.4s;
+        }
+
+        @media (max-width: 600px) {
+            .service-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">HEMEX<span>77</span></a>
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-right"></i> Back</a>
+        </div>
+    </nav>
+
+    <header class="page-hero" data-aos="zoom-in">
+        <h1>Platforms <br> <span class="outline-text">and Peaks</span></h1>
+    </header>
+
+    <section style="padding: 80px 5%; background: #0e0e0e; direction: rtl; font-family: 'Cairo', sans-serif; overflow: hidden;">
+        <div class="section-header" data-aos="fade-up">
+            <div class="orange-line"></div>
+            <h2>Unforgettable Coverage</h2>
+            <p>Behind every image is a story, and in every coverage is a unique experience</p>
+        </div>
+
+        <section id="achievements">
+            <div class="cards-container-flex">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="img-placeholder" style="background-image: url('05.png');">
+                        <div class="card-icon" style="position: absolute; bottom: 15px; left: 15px; width: 55px; height: 55px; background: #ffa211; border-radius: 12px; display: flex; align-items: center; justify-content: center; z-index: 10;">
+                            <img src="OIP-removebg-preview-removebg-preview.png" style="width: 80px; height: 80px; object-fit: contain;"> 
+                        </div>
+                    </div>
+                    <h3>Exclusive field coverage from the Italian Super Cup pitch</h3>
+                    <a href="https://www.instagram.com/p/DSdIYDjDK2a/" target="_blank" class="card-btn">View Coverage <i class="fas fa-chevron-left"></i></a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="img-placeholder" style="background-image: url('5555.png');">
+                        <div class="card-icon" style="position: absolute; bottom: 15px; left: 15px; width: 55px; height: 55px; background: #ffa211; border-radius: 12px; display: flex; align-items: center; justify-content: center; z-index: 10;">
+                            <img src="OIP-removebg-preview.png" style="width: 35px; height: 35px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <h3>Arab Cup Coverage: Documenting Historic Moments</h3>
+                    <a href="https://www.instagram.com/p/DSgNghKjFTE/" target="_blank" class="card-btn">View Coverage <i class="fas fa-chevron-left"></i></a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="img-placeholder" style="background-image: url('11111.png');">
+                        <div class="card-icon" style="position: absolute; bottom: 15px; left: 15px; width: 55px; height: 55px; background: #ffa211; border-radius: 12px; display: flex; align-items: center; justify-content: center; z-index: 10;">
+                            <img src="34.PNG" style="width: 35px; height: 35px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <h3>Field coverage from the high stands to the pitch</h3>
+                    <a href="https://www.instagram.com/p/DGdbP9rsaeS/" target="_blank" class="card-btn">View Coverage <i class="fas fa-chevron-left"></i></a>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+<style>
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 20px;
+        /* Removed direction: rtl for English text flow */
+        padding: 20px;
+    }
+
+    @media (max-width: 992px) {
+        .cards-container {
+            grid-template-columns: repeat(2, 1fr); 
+        }
+    }
+
+    @media (max-width: 600px) {
+        .cards-container {
+            grid-template-columns: 1fr; 
+        }
+    }
+</style>
+
+<div class="section-header" data-aos="fade-up" style="margin-top: 50px;">
+    <div class="orange-line"></div>
+    <h2>Figures and Celebrities</h2>
+    <p>Documenting my meetings with prominent figures and celebrities</p>
+</div>
+
+<section id="stars-section">
+    <style>
+        *{box-sizing:border-box;}
+        #stars-section{
+            background:#0b0b0b;
+            padding:60px 0;
+            overflow:hidden;
+            position:relative;
+        }
+        .stars-wrapper{
+            position:relative;
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+        }
+        .stars-scroll-container{
+            display:flex;
+            gap:20px; 
+            overflow-x: auto;
+            scroll-behavior:smooth;
+            padding:20px 10px;
+            scrollbar-width: none; 
+        }
+        .stars-scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+        .star-mini-card{
+            min-width: calc((100% - 60px) / 4); 
+            background:#111;
+            border-radius:20px;
+            overflow:hidden;
+            border:1px solid rgba(255,162,17,0.12);
+            transition:0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            flex-shrink:0;
+        }
+        .star-mini-card:hover{
+            transform:translateY(-10px);
+            border-color:#ffa211;
+            box-shadow:0 12px 30px rgba(255,162,17,0.2);
+        }
+        .img-box{
+            width:100%;
+            height:260px; 
+            background-size:cover;
+            background-position:center top;
+        }
+        .star-mini-card h3{
+            color:#fff;
+            font-size:0.95rem; 
+            text-align:center;
+            padding:15px 12px;
+            margin:0;
+            min-height:80px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-family:'Cairo',sans-serif;
+            font-weight:700;
+            line-height: 1.5;
+        }
+        .btn-link{
+            display:flex;
+            justify-content:center;
+            width:85%;
+            margin:0 auto 20px;
+            background:linear-gradient(135deg,#f7a313,#ffbc42);
+            color:#000;
+            text-decoration:none;
+            padding:12px;
+            border-radius:12px;
+            font-weight:800;
+            font-size:0.8rem;
+            font-family:'Cairo',sans-serif;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-link:hover {
+            filter: brightness(1.1);
+            transform: scale(1.02);
+        }
+        .scroll-btn{
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            width:45px;
+            height:45px;
+            border:none;
+            border-radius:50%;
+            background:#ffa211;
+            color:#000;
+            font-size:22px;
+            font-weight:bold;
+            cursor:pointer;
+            z-index:10;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .scroll-left { left: 5px; } 
+        .scroll-right { right: 5px; }
+        @media (max-width: 1100px) { .star-mini-card { min-width: calc((100% - 40px) / 3); } }
+        @media (max-width: 768px) { .star-mini-card { min-width: calc((100% - 20px) / 1.4); } .img-box { height: 220px; } .stars-wrapper { width: 92%; } }
+    </style>
+
+    <div class="stars-wrapper">
+        <button class="scroll-btn scroll-left" onclick="scrollStars(-400)">❯</button>
+        <button class="scroll-btn scroll-right" onclick="scrollStars(400)">❮</button>
+
+        <div class="stars-scroll-container" id="starsContainer">
+
+            <div class="star-mini-card">
+                <div class="img-box" style="background-image:url('2222.png');"></div>
+                <h3>Meeting with the AFC and SAFF Presidents</h3>
+                <a href="https://www.instagram.com/p/DT8Bpy5jJnX/?img_index=1" target="_blank" class="btn-link">View</a>
+            </div>
+
+            <div class="star-mini-card">
+                <div class="img-box" style="background-image:url('sss.png');"></div>
+                <h3>President of the Esports Federation</h3>
+                <a href="https://www.instagram.com/p/DRSNCYgDPRq/" target="_blank" class="btn-link">View</a>
+            </div>
+
+            <div class="star-mini-card">
+                <div class="img-box" style="background-image:url('1222.png');"></div>
+                <h3>Pep Guardiola</h3>
+                <a href="https://www.instagram.com/p/DRPar-5jMqy/?img_index=1" target="_blank" class="btn-link">View</a>
+            </div>
+
+            <div class="star-mini-card">
+                <div class="img-box" style="background-image:url('RO.png');"></div>
+                <h3>Global Football Legends</h3>
+                <a href="https://www.instagram.com/p/DS8ChJLjGRx/?img_index=4" target="_blank" class="btn-link">View</a>
+            </div>
+
+            <div class="star-mini-card">
+                <div class="img-box" style="background-image:url('BR.png');"></div>
+                <h3>With El Clasico Legends</h3>
+                <a href="https://www.tiktok.com/@hemex_7/video/7442334272855264520?_r=1&_t=ZS-94zlNaOYHVV" target="_blank" class="btn-link">View</a>
+            </div>
+
+            <div class="star-mini-card">
+                <div class="img-box" style="background-image:url('AS.png');"></div>
+                <h3>A Global Imprint, with Football Legends</h3>
+                <a href="https://www.tiktok.com/@hemex_7/video/7465856049992453384?is_from_webapp=1&sender_device=pc" target="_blank" class="btn-link">View</a>
+            </div>
+
+            <div class="star-mini-card">
+                <div class="img-box" style="background-image:url('ATM.png');"></div>
+                <h3>1v1 Challenge with Dembélé</h3>
+                <a href="https://vt.tiktok.com/ZSuTHjpAr/" target="_blank" class="btn-link">View</a>
+            </div>
+
+            <div class="star-mini-card">
+                <div class="img-box" style="background-image:url('EN.png');"></div>
+                <h3>Special Meeting with Inter Milan Players</h3>
+                <a href="https://www.tiktok.com/@hemex_7/video/7455040278181727496?is_from_webapp=1&sender_device=pc" target="_blank" class="btn-link">View</a>
+            </div>
+
+            <div class="star-mini-card">
+                <div class="img-box" style="background-image:url('SN.png');"></div>
+                <h3>Neymar and Salem Al-Dawsari On-Screen Meeting</h3>
+                <a href="https://vt.tiktok.com/ZSuTH5EVU/" target="_blank" class="btn-link">View</a>
+            </div>
+
+            <div class="star-mini-card">
+                <div class="img-box" style="background-image:url('PH.png');"></div>
+                <h3>Challenges with Barcola and Mendes</h3>
+                <a href="https://vt.tiktok.com/ZSHQ8Lyop/" target="_blank" class="btn-link">View</a>
+            </div>
+
+            <div class="star-mini-card">
+                <div class="img-box" style="background-image:url('AH.png');"></div>
+                <h3>Challenge with Asensio</h3>
+                <a href="https://vt.tiktok.com/ZSHQdAP5S/" target="_blank" class="btn-link">View</a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<script>
+    function scrollStars(amount){
+        document.getElementById('starsContainer').scrollBy({
+            left: amount,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+   <footer style="background: #0e0e0e; padding: 60px 8%; border-top: 1px solid rgba(255,255,255,0.03); position: relative; overflow: hidden; direction: ltr;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; opacity: 0.02; pointer-events: none; font-weight: 900; font-size: 15vw; color: #fff; white-space: nowrap; letter-spacing: 20px;">
+        HEMEX 77
+    </div>
+    
+    <!-- تم تعديل الـ grid-template-columns لضبط المسافات -->
+    <div class="footer-grid" style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr auto 1fr; align-items: center; gap: 40px; position: relative; z-index: 5;">
+        
+        <div style="text-align: left;">
+            <a href="#" style="font-size: 2.5rem; text-decoration: none; color: #fff; font-weight: 900; letter-spacing: -1px;">HEMEX<span style="color: #ffa211; font-weight: 300;">_77</span></a>
+            <p style="color: rgba(255,255,255,0.5); line-height: 1.8; font-size: 1rem; max-width: 400px; margin-top: 20px;">
+                The official platform for content creator Mohamed Al-Dhafi. Where sports meets entertainment.
+            </p>
+        </div>
+
+        <!-- الخط الفاصل -->
+        <div class="footer-line-box" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+            <div style="width: 1px; height: 60px; background: linear-gradient(to bottom, transparent, #ffa211, transparent);"></div>
+            <div style="width: 6px; height: 6px; background: #ffa211; border-radius: 50%;"></div>
+            <div style="width: 1px; height: 60px; background: linear-gradient(to top, transparent, #ffa211, transparent);"></div>
+        </div>
+
+        <!-- تم ضبط الـ justify-content هنا -->
+        <div class="footer-socials" style="display: flex; gap: 15px; justify-content: center;">
+            <a href="https://www.tiktok.com/@hemex_7" class="ft-social-orange" style="color: #ffa211; font-size: 1.2rem;"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/hemex_77/" class="ft-social-orange" style="color: #ffa211; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@hemex" class="ft-social-orange" style="color: #ffa211; font-size: 1.2rem;"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/hemex_777" class="ft-social-orange" style="color: #ffa211; font-size: 1.2rem;"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.snapchat.com/@hemex_7" class="ft-social-orange" style="color: #ffa211; font-size: 1.2rem;"><i class="fab fa-snapchat"></i></a>
+        </div>
+    </div>
+</footer>
+    <div style="padding: 25px; text-align: center; direction: ltr;">
+        <div style="width: 40px; height: 1px; background: #ffa211; margin: 0 auto 20px; opacity: 0.5;"></div>
+        <h2 style="margin: 0; font-size: 1.6rem; font-weight: 900; color: #fff;">SARA <span style="color: #ffa211; font-weight: 300; letter-spacing: 2px;">MOHAMAD</span></h2>
+        <p style="margin: 5px 0; font-size: 0.7rem; color: #666; text-transform: uppercase; letter-spacing: 3px;">Developer & Designer</p>
+        <div style="margin-top: 15px; display: flex; align-items: center; justify-content: center; gap: 15px;">
+            <a href="https://www.instagram.com/sara.designer44/" target="_blank" style="color: #fff; font-size: 0.9rem;"><i class="fab fa-instagram"></i></a>
+            <span style="font-size: 0.65rem; color: #444; letter-spacing: 1px;">Proudly made in Gaza</span>
+        </div>
+    </div>
+</section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true, offset: 120, easing: 'ease-out-cubic' });
+    </script>
+</body>
+</html>
